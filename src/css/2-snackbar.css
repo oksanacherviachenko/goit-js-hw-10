@@ -2,18 +2,20 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Arial', sans-serif;
-  background-color: #f0f0f0;
+  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .container {
   background-color: #fff;
   padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
   max-width: 400px;
   width: 100%;
   text-align: center;
@@ -32,11 +34,20 @@ body {
   gap: 20px;
 }
 
+input[type='number'],
+fieldset,
+button[type='submit'] {
+  width: 100%; /* Однакова ширина */
+  max-width: 100%; /* Запобігає виходу за межі контейнера */
+}
+
 label {
   display: block;
   font-size: 16px;
   margin-bottom: 10px;
   color: #555;
+  width: 100%;
+  text-align: left;
 }
 
 input[type='number'] {
@@ -53,10 +64,22 @@ input[type='number']:focus {
 }
 
 fieldset {
-  border: none;
-  padding: 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  stroke-width: 1px;
+  stroke: #808080;
+  padding-left: 48px;
   margin: 0;
+  width: 100%;
   text-align: left;
+}
+
+.fieldset-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 48px;
 }
 
 legend {
@@ -69,6 +92,7 @@ input[type='radio'] {
 }
 
 button[type='submit'] {
+  width: 100%;
   padding: 10px 20px;
   font-size: 16px;
   background-color: #2196f3;
