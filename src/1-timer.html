@@ -11,8 +11,12 @@
     <main>
       <div class="container">
         <h1 class="main-title">Welcome to Timer</h1>
-        <input type="text" id="datetime-picker" />
-        <button type="button" data-start>Start</button>
+        <div class="input-container">
+          <input class="datetime-picker" type="text" id="datetime-picker" />
+          <button class="datetime-start" type="button" data-start disabled>
+            Start
+          </button>
+        </div>
 
         <div class="timer">
           <div class="field">

@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #fff;
+  height: 100vh;
+  position: relative; /* Позиціювання контейнера відносно тіла */
+}
+
+.container {
+  text-align: center;
+  background-color: #fff;
+  padding: 30px;
+  max-width: 400px;
+  width: 100%;
+  position: absolute; /* Абсолютне позиціювання */
+  top: 0; /* Верхній край */
+  left: 0; /* Лівий край */
+  margin: 10px; /* Відступ від країв екрану */
+}
+
+.main-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Новий стиль для контейнера інпуту та кнопки */
+.input-container {
+  display: flex; /* Вирівнювання в один рядок */
+  align-items: center; /* Вирівнювання по вертикалі */
+  gap: 10px; /* Відступ між інпутом та кнопкою */
+  margin-bottom: 20px; /* Відступ від таймера */
+}
+
+.datetime-picker {
+  flex-grow: 1; /* Інпут розтягується на всю доступну ширину */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.datetime-start {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #2196f3;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.datetime-start:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.datetime-start:hover:not(:disabled) {
+  background-color: #1976d2;
+}
+
+.timer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.field {
+  text-align: center;
+}
+
+.value {
+  display: block;
+  font-size: 40px;
+  font-weight: 400;
+  color: #2e2f42;
+}
+
+.label {
+  display: block;
+  font-size: 16px;
+  color: #666;
+}
+
+@media (max-width: 480px) {
+  .timer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .field {
+    margin-bottom: 15px;
+  }
+
+  .value {
+    font-size: 40px;
+  }
+
+  .label {
+    font-size: 16px;
+  }
+}
